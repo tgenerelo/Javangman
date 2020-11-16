@@ -9,24 +9,23 @@ public class Javangman {
 
 		Scanner leer = new Scanner(System.in);
 		String palabra = "", userInput = "", letrasJugadas = "", letrasAcertadas = "";
+		String vPalabraOculta[], vAciertos[], vLetrasJugadas[];
 		int vidas = 7;
 		boolean win = false;
 
 		palabra = escogerPalabra();
 
-		// PRIMERA VEZ
-		imprimirDibujo(vidas);
+		vPalabraOculta = new String[palabra.length()];
+		vAciertos = new String[palabra.length()];
+		vLetrasJugadas = new String[palabra.length() + vidas]; //
 
-		userInput = "";
-		System.out.print("Escribe una letra: ");
-		userInput = leer.next().toUpperCase();
+		inicializarVectores(palabra, vPalabraOculta, vAciertos, vLetrasJugadas);
 
 		do {
 			imprimirDibujo(vidas);
 
 			System.out.println();
-			System.out.print(palabra + " || ");
-			imprimirPalabra(palabra, letrasAcertadas, vidas);
+			imprimirPalabra(palabra, vPalabraOculta, letrasAcertadas, vidas);
 			System.out.println("Letras jugadas: " + letrasJugadas + "     Letras acertadas: " + letrasAcertadas);
 
 			System.out.println();
@@ -35,17 +34,19 @@ public class Javangman {
 			System.out.print("Escribe una letra: ");
 			userInput = leer.next().toUpperCase();
 
-			letrasJugadas = letrasJugadas + userInput.substring(0, 1);
-			if (letrasAcertadas.equals(compararInput(userInput, palabra, letrasAcertadas))) {
-				vidas = restarVida(vidas);
-			} else {
-				letrasAcertadas = compararInput(userInput, palabra, letrasAcertadas);
-			}
+			compararInput(userInput, palabra, vPalabraOculta, vLetrasJugadas, letrasAcertadas);
 
-			if (palabra.length() == letrasAcertadas.length()) {
-				win = true;
-				break;
-			}
+//			letrasJugadas = letrasJugadas + userInput.substring(0, 1);
+//			if (letrasAcertadas.equals(compararInput(userInput, palabra, vPalabraOculta, letrasAcertadas))) {
+//				vidas = restarVida(vidas);
+//			} else {
+//				letrasAcertadas = compararInput(userInput, palabra, vPalabraOculta, letrasAcertadas);
+//			}
+//
+//			if (palabra.length() == letrasAcertadas.length()) {
+//				win = true;
+//				break;
+//			}
 
 			if (vidas <= 0) {
 				break;
@@ -60,9 +61,22 @@ public class Javangman {
 
 	// ////////////////////////////////////////////////////////////////////////////////////////////////
 	// ////////////////////////////////////////////////////////////////////////////////////////////////
-	// ----------------------------------------FUNCIONES-----------------------------------------------
+	// ----------------------------------------FUNCIONES---------------------------------------------//
 	// ////////////////////////////////////////////////////////////////////////////////////////////////
 	// ////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// INICIALIZAR VECTORES
+	public static void inicializarVectores(String palabra, String vPalabraOculta[], String vAciertos[],
+			String vLetrasJugadas[]) {
+		for (int i = 0; i < vPalabraOculta.length; i++) {
+			vPalabraOculta[i] = "_";
+			vAciertos[i] = "";
+		}
+
+		for (int i = 0; i < vLetrasJugadas.length; i++) {
+			vLetrasJugadas[i] = "";
+		}
+	}
 
 	// ESCOGER PALABRA //
 	public static String escogerPalabra() {
@@ -126,7 +140,8 @@ public class Javangman {
 	}
 
 	// COMPARAR INPUT //
-	public static String compararInput(String userInput, String palabra, String letrasAcertadas) {
+	public static String compararInput(String userInput, String palabra, String vPalabraOculta[],
+			String vLetrasJugadas[], String letrasAcertadas) {
 		/*
 		 * VARIABLES: palabra, userInput, letrasJugadas, letrasAcertadas RETURN:
 		 * letrasAcertadas Cada vez que se introduce un userInput se añade a
@@ -135,16 +150,26 @@ public class Javangman {
 		 * letrasJugadas, mostrar error y volver a Pintar muñeco / pedir input
 		 */
 
-		for (int i = 0; i < palabra.length(); i++) {
-			for (int j = 0; j < userInput.length(); j++) {
-				if (palabra.substring(i, i + 1).equalsIgnoreCase(userInput.substring(j, j + 1))) {
-					letrasAcertadas = letrasAcertadas + userInput.substring(j, j + 1);
+		for (int i = 0; i < vLetrasJugadas.length; i++) {
+			if (userInput.equals(vLetrasJugadas[i])) {
+				break;
+			} else {
+				if (vLetrasJugadas[i].equals("")) {
+					vLetrasJugadas[i] = userInput;
+					break;
+				}
+			}
+		}
+
+		for (int i = 0; i < userInput.length(); i++) {
+			for (int j = 0; j < palabra.length(); j++) {
+				if (userInput.substring(i, i + 1).equalsIgnoreCase(palabra.substring(j, j + 1))) {
+					vPalabraOculta[j] = userInput;
 				}
 			}
 		}
 
 		return letrasAcertadas;
-
 	}
 
 	// RESTAR VIDA //
@@ -158,7 +183,7 @@ public class Javangman {
 
 		switch (vidas) {
 		case 7: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |                       |");
 			System.out.println(" |                       |");
@@ -172,7 +197,7 @@ public class Javangman {
 			break;
 		}
 		case 6: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |                       |");
 			System.out.println(" |                       |");
@@ -186,7 +211,7 @@ public class Javangman {
 			break;
 		}
 		case 5: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |                       |");
 			System.out.println(" |       |               |");
@@ -200,7 +225,7 @@ public class Javangman {
 			break;
 		}
 		case 4: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
 			System.out.println(" |       | /             |");
@@ -214,7 +239,7 @@ public class Javangman {
 			break;
 		}
 		case 3: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
 			System.out.println(" |       | /   :         |");
@@ -228,7 +253,7 @@ public class Javangman {
 			break;
 		}
 		case 2: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
 			System.out.println(" |       | /   :         |");
@@ -242,7 +267,7 @@ public class Javangman {
 			break;
 		}
 		case 1: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
 			System.out.println(" |       | /   :         |");
@@ -256,7 +281,7 @@ public class Javangman {
 			break;
 		}
 		case 0: {
-			System.out.println(" _________________________");
+			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
 			System.out.println(" |       | /   :         |");
@@ -274,22 +299,20 @@ public class Javangman {
 	}
 
 	// IMPRIMIR PALABRA //
-	public static void imprimirPalabra(String palabra, String letrasAcertadas, int vidas) {
-		System.out.print("  -> ");
-		for (int i = 0; i < palabra.length(); i++) {
-			for (int j = 0; j < letrasAcertadas.length(); j++) {
-				if (palabra.substring(i, i + 1).equalsIgnoreCase(letrasAcertadas.substring(j, j + 1))) {
-					System.out.print(palabra.substring(i, i + 1) + " ");
-					break;
-				} else {
-					System.out.print("_ ");
-					break;
-				}
-			}
-		}
-		System.out.println("<-");
+	public static void imprimirPalabra(String palabra, String vPalabraOculta[], String letrasAcertadas, int vidas) {
 
-		System.out.println(" (Vidas restantes: " + vidas + ")");
+		System.out.print("  ->  ");
+
+		for (int i = 0; i < vPalabraOculta.length; i++) {
+			System.out.print(vPalabraOculta[i] + " ");
+		}
+
+		System.out.print(" <-");
+
+		System.out.println(" (" + palabra + ")"); // QUITAR CUANDO EL PROGRAMA ESTÉ TERMINADO
+
+		System.out.println();
+
 	}
 
 	// FIN DE PARTIDA
