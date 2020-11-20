@@ -71,12 +71,8 @@ public class Javangman {
 		}
 	}
 
-	// ESCOGER PALABRA //
+	// ESCOGER PALABRA
 	public static String escogerPalabra() {
-		/*
-		 * Escoger palabra al azar VARIABLES: palabra, userInput RETURN: palabra Las
-		 * palabras se almacenan en un vector.
-		 */
 
 		Random azar = new Random();
 		String palabra = "";
@@ -208,24 +204,14 @@ public class Javangman {
 		for (int i = 0; i < vLetrasJugadas.length; i++) {
 			System.out.print(vLetrasJugadas[i]);
 		}
-//		System.out.print("     Letras acertadas: ");
-//		for (int i=0; i<vPalabraOculta.length; i++) {
-//			System.out.print(vPalabraOculta[i]);
-//		}
+
 		System.out.println();
 		System.out.println();
 	}
 
-	// COMPARAR INPUT //
+	// COMPARAR INPUT
 	public static boolean compararInput(String userInput, String palabra, String vPalabraOculta[],
 			String vLetrasJugadas[], String letrasAcertadas) {
-		/*
-		 * VARIABLES: palabra, userInput, letrasJugadas, letrasAcertadas RETURN:
-		 * letrasAcertadas Cada vez que se introduce un userInput se añade a
-		 * letrasJugadas y se compara con palabra. Si la letra aparece en la palabra, se
-		 * añadirá también a letrasAcertadas. Si la palabra ya estaba presente en
-		 * letrasJugadas, mostrar error y volver a Pintar muñeco / pedir input
-		 */
 
 		boolean exito, letraYaJugada;
 
@@ -265,7 +251,7 @@ public class Javangman {
 		return vidas;
 	}
 
-	// IMPRIMIR DIBUJO //
+	// IMPRIMIR DIBUJO
 	public static void imprimirDibujo(int vidas) {
 
 		switch (vidas) {
@@ -372,7 +358,7 @@ public class Javangman {
 		System.out.println();
 	}
 
-	// IMPRIMIR PALABRA //
+	// IMPRIMIR PALABRA
 	public static void imprimirPalabra(String palabra, String vPalabraOculta[], int vidas) {
 
 		System.out.print("  ->  ");
@@ -390,7 +376,7 @@ public class Javangman {
 
 	}
 
-	// COMPROBAR VICTORIA //
+	// COMPROBAR VICTORIA
 	public static boolean comprobarVictoria(String vPalabraOculta[]) {
 		boolean win = true;
 
@@ -405,7 +391,7 @@ public class Javangman {
 
 	}
 
-	// FIN DE PARTIDA //
+	// FIN DE PARTIDA
 	public static boolean finPartida(boolean win, String palabra) {
 		Scanner leer = new Scanner(System.in);
 		String userInput = "";
