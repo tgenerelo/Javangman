@@ -55,11 +55,9 @@ public class Javangman {
 		} while (salir == false);
 
 		System.out.println("\nGracias por jugar a Javangman.\nEl programa se cerrará.");
-
 	}
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// ----------------------------------------FUNCIONES---------------------------------------------//
+// ----------------------------------------Metodos-----------------------------------------------//
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/**
@@ -137,7 +135,8 @@ public class Javangman {
 				"EXPRESION", "EXTASIS", "EXTERIOR", "FABRICA", "FALDA", "FALTA", "FAMILIA", "FASE", "FAVOR", "FECHA",
 				"FERROCARRIL", "FIGURA", "FIN", "FINAL", "FLOR", "FONDO", "FORMA", "FORMACION", "FORMALIDAD", "FRACASO",
 				"FRANCES", "FRENTE", "FRUTA", "FUEGO", "FUENTE", "FUERZA", "FUNCION", "FUTURO", "GAFAS", "GALAXIA",
-				"GALLINA", "GAS", "GASEOSA", "GATO", "GENTE", "GEOGRAFIA", "GOBERNADOR", "GOBIERNO", "GORRION",
+				"GALLINA", "GAS", "GASEOSA", "\n"
+						+ "	 GATO", "GENTE", "GEOGRAFIA", "GOBERNADOR", "GOBIERNO", "GORRION",
 				"GRABADO", "GRADO", "GRAMO", "GRIPE", "GRIS", "GRUPO", "GUERRA", "GUISANTE", "HABITACION", "HALCON",
 				"HERMANA", "HERMANO", "HIELO", "HIERRO", "HIGADO", "HIJA", "HIJO", "HILO", "HISTORIA", "HOGAR", "HOJA",
 				"HOMBRE", "HOMBRO", "HONGO", "HORA", "HORTICULTURA", "HOTEL", "HOY", "HUESO", "HUMANIDAD", "HUMANO",
@@ -490,7 +489,7 @@ public class Javangman {
 			System.out.println(" |                       |");
 			System.out.println(" |_______________________|");
 			System.out.println();
-			System.out.println("   ABOUT    GAME OVER");
+			System.out.println("        GAME OVER");
 			System.out.println("  La palabra era " + palabra.toUpperCase());
 			System.out.println();
 			System.out.println();
@@ -529,6 +528,7 @@ public class Javangman {
 		System.out.println("\n------------------------------");
 		System.out.println("|  ACERCA DE  Javangman 1.6  |");
 		System.out.println("------------------------------");
+		System.out.println("|        850 palabras        |");
 		System.out.println("|    Programado con Java.    |");
 		System.out.println("|                            |");
 		System.out.println("|  (c) Tomás Generelo, 2020  |");
