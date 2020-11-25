@@ -53,7 +53,7 @@ public class Javangman {
 			salir = finPartida(win, palabra);
 
 		} while (salir == false);
-		
+
 		System.out.println("\nGracias por jugar a Javangman.\nEl programa se cerrará.");
 
 	}
@@ -62,7 +62,15 @@ public class Javangman {
 // ----------------------------------------FUNCIONES---------------------------------------------//
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-	// INICIALIZAR VECTORES
+	/**
+	 * INICIALIZAR VECTORES
+	 * 
+	 * @param palabra        La palabra escogida al azar para la partida.
+	 * @param vPalabraOculta Vector que separa cada letra de la palabra y la
+	 *                       sustituye por "_".
+	 * @param vLetrasJugadas Vector que almacenará las letras jugadas durante la
+	 *                       partida.
+	 */
 	public static void inicializarVectores(String palabra, String vPalabraOculta[], String vLetrasJugadas[]) {
 		for (int i = 0; i < vPalabraOculta.length; i++) {
 			vPalabraOculta[i] = "_";
@@ -73,7 +81,11 @@ public class Javangman {
 		}
 	}
 
-	// ESCOGER PALABRA
+	/**
+	 * ESCOGER PALABRA
+	 * 
+	 * @return Devuelve una palabra escogida al azar del diccionario
+	 */
 	public static String escogerPalabra() {
 
 		Random azar = new Random();
@@ -181,7 +193,12 @@ public class Javangman {
 		return palabra;
 	}
 
-	// LETRA VALIDA
+	/**
+	 * LETRA VÁLIDA
+	 * 
+	 * @param userInput Letra introducida por el usuario.
+	 * @return Devuelve si la letra aparece en la palabra o no.
+	 */
 	public static boolean letraValida(String userInput) {
 		boolean letraValida = false;
 		String numeros = "1234567890";
@@ -200,7 +217,13 @@ public class Javangman {
 		return letraValida;
 	}
 
-	// MOSTRAR LETRAS JUGADAS
+	/**
+	 * MOSTRAR LETRAS JUGADAS
+	 * 
+	 * @param vLetrasJugadas Vector con las letras jugadas durante la partida.
+	 * @param vPalabraOculta Vector con las letras de la palabra separadas y
+	 *                       sustituidas por "_".
+	 */
 	public static void mostrarLetrasJugadas(String vLetrasJugadas[], String vPalabraOculta[]) {
 		System.out.print("  Letras jugadas: ");
 		for (int i = 0; i < vLetrasJugadas.length; i++) {
@@ -211,7 +234,17 @@ public class Javangman {
 		System.out.println();
 	}
 
-	// COMPARAR INPUT
+	/**
+	 * COMPARAR INPUT
+	 * 
+	 * @param userInput       La letra introducida por el usuario.
+	 * @param palabra         La palabra escogida al azar para la partida.
+	 * @param vPalabraOculta  Vector con las letras de la palabra separadas y
+	 *                        sustituidas por "_".
+	 * @param vLetrasJugadas  Vector con las letras jugadas durante la partida.
+	 * @param letrasAcertadas Las letras jugadas que están en la palabra.
+	 * @return
+	 */
 	public static boolean compararInput(String userInput, String palabra, String vPalabraOculta[],
 			String vLetrasJugadas[], String letrasAcertadas) {
 
@@ -247,13 +280,22 @@ public class Javangman {
 		return exito;
 	}
 
-	// RESTAR VIDA //
+	/**
+	 * RESTAR VIDA
+	 * 
+	 * @param vidas La vida inicial del usuario.
+	 * @return La vida final del usuario.
+	 */
 	public static int restarVida(int vidas) {
 		vidas--;
 		return vidas;
 	}
 
-	// IMPRIMIR DIBUJO
+	/**
+	 * IMPRIMIR DIBUJO
+	 * 
+	 * @param vidas La vida actual del usuario
+	 */
 	public static void imprimirDibujo(int vidas) {
 
 		switch (vidas) {
@@ -360,7 +402,14 @@ public class Javangman {
 		System.out.println();
 	}
 
-	// IMPRIMIR PALABRA
+	/**
+	 * IMPRIMIR PALABRA
+	 * 
+	 * @param palabra        La palabra escogida al azar para la partida.
+	 * @param vPalabraOculta Vector con las letras de la palabra separadas y
+	 *                       sustituidas por "_".
+	 * @param vidas          La vida actual del usuario.
+	 */
 	public static void imprimirPalabra(String palabra, String vPalabraOculta[], int vidas) {
 
 		System.out.print("  ->  ");
@@ -378,7 +427,13 @@ public class Javangman {
 
 	}
 
-	// COMPROBAR VICTORIA
+	/**
+	 * COMPROBAR VICTORIA
+	 * 
+	 * @param vPalabraOculta Vector con las letras de la palabra separadas y
+	 *                       sustituidas por "_".
+	 * @return Asigna un valor true si el usuario ha ganado la partida.
+	 */
 	public static boolean comprobarVictoria(String vPalabraOculta[]) {
 		boolean win = true;
 
@@ -393,7 +448,13 @@ public class Javangman {
 
 	}
 
-	// FIN DE PARTIDA
+	/**
+	 * FIN DE PARTIDA
+	 * 
+	 * @param win     Victoria o derrota del usuario.
+	 * @param palabra La palabra escogida al azar para la partida.
+	 * @return Devuelve si el usuario desea jugar otra patida o no.
+	 */
 	public static boolean finPartida(boolean win, String palabra) {
 		Scanner leer = new Scanner(System.in);
 		String userInput = "";
@@ -429,7 +490,7 @@ public class Javangman {
 			System.out.println(" |                       |");
 			System.out.println(" |_______________________|");
 			System.out.println();
-			System.out.println("       GAME OVER");
+			System.out.println("   ABOUT    GAME OVER");
 			System.out.println("  La palabra era " + palabra.toUpperCase());
 			System.out.println();
 			System.out.println();
@@ -459,12 +520,14 @@ public class Javangman {
 		return salir;
 
 	}
-	
-	// ABOUT
+
+	/**
+	 * ABOUT
+	 */
 	public static void about() {
-		
+
 		System.out.println("\n------------------------------");
-		System.out.println("|  ACERCA DE  Javangman 1.5  |");
+		System.out.println("|  ACERCA DE  Javangman 1.6  |");
 		System.out.println("------------------------------");
 		System.out.println("|    Programado con Java.    |");
 		System.out.println("|                            |");
