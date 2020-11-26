@@ -2,6 +2,7 @@ package javangman;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Timer;
 
 public class Javangman {
 
@@ -57,7 +58,7 @@ public class Javangman {
 		System.out.println("\nGracias por jugar a Javangman.\nEl programa se cerrará.");
 	}
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// ----------------------------------------Metodos-----------------------------------------------//
+// ----------------------------------------MÉTODOS-----------------------------------------------//
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/**
@@ -135,30 +136,29 @@ public class Javangman {
 				"EXPRESION", "EXTASIS", "EXTERIOR", "FABRICA", "FALDA", "FALTA", "FAMILIA", "FASE", "FAVOR", "FECHA",
 				"FERROCARRIL", "FIGURA", "FIN", "FINAL", "FLOR", "FONDO", "FORMA", "FORMACION", "FORMALIDAD", "FRACASO",
 				"FRANCES", "FRENTE", "FRUTA", "FUEGO", "FUENTE", "FUERZA", "FUNCION", "FUTURO", "GAFAS", "GALAXIA",
-				"GALLINA", "GAS", "GASEOSA", "\n"
-						+ "	 GATO", "GENTE", "GEOGRAFIA", "GOBERNADOR", "GOBIERNO", "GORRION",
-				"GRABADO", "GRADO", "GRAMO", "GRIPE", "GRIS", "GRUPO", "GUERRA", "GUISANTE", "HABITACION", "HALCON",
-				"HERMANA", "HERMANO", "HIELO", "HIERRO", "HIGADO", "HIJA", "HIJO", "HILO", "HISTORIA", "HOGAR", "HOJA",
-				"HOMBRE", "HOMBRO", "HONGO", "HORA", "HORTICULTURA", "HOTEL", "HOY", "HUESO", "HUMANIDAD", "HUMANO",
-				"IDEA", "IDIOMA", "IMAGEN", "IMAN", "INFORMACION", "INFORME", "INGLES", "INICIO", "INSECTO", "INSTANTE",
-				"INSTITUTO", "INTENDENTE", "INTENTO", "INTERES", "INTERIOR", "INTERRUPCION", "INVESTIGACION",
-				"IZQUIERDA", "JAPONES", "JIRAFA", "JUDIA", "JUEVES", "JUNGLA", "KILO", "KILOMETRO", "KIWI", "LABIO",
-				"LADO", "LADRON", "LAGARTO", "LAGO", "LAGUNA", "LAMINA", "LANGOSTA", "LARGO", "LEÑA", "LEON", "LEY",
-				"LIBERTAD", "LIBRO", "LITRO", "LLAVE", "LLAVERO", "LLUVIA", "LODO", "LOGRO", "LOMBRIZ", "LONGITUD",
-				"LUGAR", "LUNA", "LUNES", "LUZ", "MADRE", "MANDARINA", "MANERA", "MANGA", "MANIQUI", "MANO", "MANZANA",
-				"MAÑANA", "MAQUINA", "MAR", "MARIPOSA", "MARISCO", "MARRON", "MARTES", "MARTIR", "MATRIMONIO",
-				"MAYORIA", "MEDIDA", "MEDIODIA", "MEJORA", "MEMORIA", "MENTE", "MENTIRA", "MERCADO", "MERCENARIO",
-				"MES", "MESA", "MESILLA", "META", "METAL", "METALICO", "METRO", "MIEDO", "MIERCOLES", "MIL", "MILENIO",
-				"MILIMETRO", "MILLON", "MINISTRO", "MINORIA", "MINUTO", "MODO", "MOLUSCO", "MOMENTO", "MONO", "MONTAÑA",
-				"MONTE", "MOSCA", "MOSQUITO", "MOVIMIENTO", "MUERTE", "MUJER", "MULTICOLOR", "MUNDO", "MUNICIPIO",
-				"MUÑECA", "MURCIELAGO", "MUSCULO", "MUSICA", "MUSLO", "NACIMIENTO", "NACION", "NADA", "NARANJA",
-				"NARIZ", "NATURALEZA", "NECESIDAD", "NEGRO", "NEVERA", "NIETA", "NIETO", "NIEVE", "NIÑA", "NIÑO",
-				"NIVEL", "NOCHE", "NOMBRE", "NORMA", "NORTE", "NOTICIA", "NUBLADO", "NUDO", "NUEVE", "NUEZ", "NUMERO",
-				"OBJETIVO", "OBJETO", "OBLIGACION", "OBRA", "OCASION", "OCEANO", "OCHO", "OESTE", "OFERTA", "OFICINA",
-				"OIDO", "OJO", "OLFATO", "OMNIBUS", "ORDEN", "ORDENADOR", "OREJA", "ORGANIZACION", "ORIGEN", "ORO",
-				"ORQUESTA", "OVEJA", "PADRE", "PAIS", "PAJARO", "PALABRA", "PALMA", "PANEL", "PANTALLA", "PANTALON",
-				"PAPA", "PAPEL", "PARADA", "PARAGUAS", "PARASOL", "PARBULARIO", "PAREJA", "PARLAMENTARIO", "PARTE",
-				"PARTIDO", "PASADO", "PASO", "PASTO", "PATA", "PATATA", "PAZ", "PECHO", "PENSAMIENTO", "PERA",
+				"GALLINA", "GAS", "GASEOSA", "\n" + "	 GATO", "GENTE", "GEOGRAFIA", "GOBERNADOR", "GOBIERNO",
+				"GORRION", "GRABADO", "GRADO", "GRAMO", "GRIPE", "GRIS", "GRUPO", "GUERRA", "GUISANTE", "HABITACION",
+				"HALCON", "HERMANA", "HERMANO", "HIELO", "HIERRO", "HIGADO", "HIJA", "HIJO", "HILO", "HISTORIA",
+				"HOGAR", "HOJA", "HOMBRE", "HOMBRO", "HONGO", "HORA", "HORTICULTURA", "HOTEL", "HOY", "HUESO",
+				"HUMANIDAD", "HUMANO", "IDEA", "IDIOMA", "IMAGEN", "IMAN", "INFORMACION", "INFORME", "INGLES", "INICIO",
+				"INSECTO", "INSTANTE", "INSTITUTO", "INTENDENTE", "INTENTO", "INTERES", "INTERIOR", "INTERRUPCION",
+				"INVESTIGACION", "IZQUIERDA", "JAPONES", "JIRAFA", "JUDIA", "JUEVES", "JUNGLA", "KILO", "KILOMETRO",
+				"KIWI", "LABIO", "LADO", "LADRON", "LAGARTO", "LAGO", "LAGUNA", "LAMINA", "LANGOSTA", "LARGO", "LEÑA",
+				"LEON", "LEY", "LIBERTAD", "LIBRO", "LITRO", "LLAVE", "LLAVERO", "LLUVIA", "LODO", "LOGRO", "LOMBRIZ",
+				"LONGITUD", "LUGAR", "LUNA", "LUNES", "LUZ", "MADRE", "MANDARINA", "MANERA", "MANGA", "MANIQUI", "MANO",
+				"MANZANA", "MAÑANA", "MAQUINA", "MAR", "MARIPOSA", "MARISCO", "MARRON", "MARTES", "MARTIR",
+				"MATRIMONIO", "MAYORIA", "MEDIDA", "MEDIODIA", "MEJORA", "MEMORIA", "MENTE", "MENTIRA", "MERCADO",
+				"MERCENARIO", "MES", "MESA", "MESILLA", "META", "METAL", "METALICO", "METRO", "MIEDO", "MIERCOLES",
+				"MIL", "MILENIO", "MILIMETRO", "MILLON", "MINISTRO", "MINORIA", "MINUTO", "MODO", "MOLUSCO", "MOMENTO",
+				"MONO", "MONTAÑA", "MONTE", "MOSCA", "MOSQUITO", "MOVIMIENTO", "MUERTE", "MUJER", "MULTICOLOR", "MUNDO",
+				"MUNICIPIO", "MUÑECA", "MURCIELAGO", "MUSCULO", "MUSICA", "MUSLO", "NACIMIENTO", "NACION", "NADA",
+				"NARANJA", "NARIZ", "NATURALEZA", "NECESIDAD", "NEGRO", "NEVERA", "NIETA", "NIETO", "NIEVE", "NIÑA",
+				"NIÑO", "NIVEL", "NOCHE", "NOMBRE", "NORMA", "NORTE", "NOTICIA", "NUBLADO", "NUDO", "NUEVE", "NUEZ",
+				"NUMERO", "OBJETIVO", "OBJETO", "OBLIGACION", "OBRA", "OCASION", "OCEANO", "OCHO", "OESTE", "OFERTA",
+				"OFICINA", "OIDO", "OJO", "OLFATO", "OMNIBUS", "ORDEN", "ORDENADOR", "OREJA", "ORGANIZACION", "ORIGEN",
+				"ORO", "ORQUESTA", "OVEJA", "PADRE", "PAIS", "PAJARO", "PALABRA", "PALMA", "PANEL", "PANTALLA",
+				"PANTALON", "PAPA", "PAPEL", "PARADA", "PARAGUAS", "PARASOL", "PARBULARIO", "PAREJA", "PARLAMENTARIO",
+				"PARTE", "PARTIDO", "PASADO", "PASO", "PASTO", "PATA", "PATATA", "PAZ", "PECHO", "PENSAMIENTO", "PERA",
 				"PERCEPCION", "PERIODICO", "PERIODISMO", "PERIQUITO", "PERJUICIO", "PERMISO", "PERRO", "PERSONA",
 				"PERSONALIDAD", "PESO", "PEZ", "PIE", "PIEL", "PIERNA", "PINO", "PINTURA", "PISO", "PLACER", "PLANETA",
 				"PLANTA", "PLATA", "PLATANO", "PLAYA", "PLOMO", "POBLACION", "POLICIA", "POLILLA", "POLITICA",
@@ -455,11 +455,71 @@ public class Javangman {
 	 * @return Devuelve si el usuario desea jugar otra patida o no.
 	 */
 	public static boolean finPartida(boolean win, String palabra) {
+		int temp = 0;
 		Scanner leer = new Scanner(System.in);
 		String userInput = "";
 		boolean salir = false, error = false;
 
 		if (win == true) {
+			for (int i = 0; i < 2; i++) {
+				try {
+					Thread.sleep(temp);
+				} catch (InterruptedException ex) {
+
+				}
+
+				System.out.println("  _______________________");
+				System.out.println(" |                       |");
+				System.out.println(" |       ________        |");
+				System.out.println(" |       | /             |");
+				System.out.println(" |       |/   \\O/        |");
+				System.out.println(" |       |     |         |");
+				System.out.println(" |       |   _/_\\_       |");
+				System.out.println(" |      /|\\  |   |       |");
+				System.out.println(" |     /_|_\\_|___|_      |");
+				System.out.println(" |                       |");
+				System.out.println(" |_______________________|");
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+
+				temp = 500;
+
+				try {
+					Thread.sleep(temp);
+				} catch (InterruptedException ex) {
+
+				}
+
+				System.out.println("  _______________________");
+				System.out.println(" |                       |");
+				System.out.println(" |       ________        |");
+				System.out.println(" |       | /             |");
+				System.out.println(" |       |/    O         |");
+				System.out.println(" |       |    /|\\        |");
+				System.out.println(" |       |   _/_\\_       |");
+				System.out.println(" |      /|\\  |   |       |");
+				System.out.println(" |     /_|_\\_|___|_      |");
+				System.out.println(" |                       |");
+				System.out.println(" |_______________________|");
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+
+			}
+
+			try {
+				Thread.sleep(temp);
+			} catch (InterruptedException ex) {
+
+			}
+
 			System.out.println("  _______________________");
 			System.out.println(" |                       |");
 			System.out.println(" |       ________        |");
@@ -476,6 +536,8 @@ public class Javangman {
 			System.out.println("  La palabra era " + palabra.toUpperCase());
 			System.out.println();
 			System.out.println();
+			System.out.println();
+
 		} else {
 			System.out.println("  _______________________");
 			System.out.println(" |                       |");
@@ -526,7 +588,7 @@ public class Javangman {
 	public static void about() {
 
 		System.out.println("\n------------------------------");
-		System.out.println("|  ACERCA DE  Javangman 1.6  |");
+		System.out.println("|  ACERCA DE  Javangman 1.7  |");
 		System.out.println("------------------------------");
 		System.out.println("|        850 palabras        |");
 		System.out.println("|    Programado con Java.    |");
