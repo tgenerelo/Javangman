@@ -1,8 +1,8 @@
-# JAVANGMAN 2.1
+# JAVANGMAN 2.1.1
 Juego del ahorcado que puede ser jugado en la consola de Eclipse IDE.
 
 ## Características
-- 1234 palabras distribuidas en 6 categorías.
+- 1300 palabras distribuidas en 7 categorías.
 - En cada partida se escoge una categoría y palabra al azar.
 - Representación gráfica del progreso del jugador.
 - 7 vidas antes de perder la partida.
@@ -15,3 +15,4 @@ Juego del ahorcado que puede ser jugado en la consola de Eclipse IDE.
 - **Estados de EE.UU.**: Extraídos de https://es.wikipedia.org/wiki/Estado_de_los_Estados_Unidos.
 - **Instrumentos musicales**: Recopilados por Paula Béjar.
 - **Astronomía**: Conceptos y objetos astronómicos, extraídos principalmente de https://www.sea-astronomia.es/sites/default/files/100_conceptos_astr.pdf y https://www.muyinteresante.es/ciencia/fotos/diccionario-de-astronomia. 
+- **Profesiones**: Extraídas principalmente de http://www.mansioningles.com/vocabulario30.htm. Los nombres de las profesiones van en masculino genérico por cuestiones de simplicidad e inclusividad, y en ningún caso con ánimo discriminatorio.
