@@ -1,4 +1,4 @@
-# JAVANGMAN 2.1.1
+# JAVANGMAN 2.1.2
 Juego del ahorcado que puede ser jugado en la consola de Eclipse IDE.
 
 ## Características
