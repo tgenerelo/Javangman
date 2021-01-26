@@ -210,101 +210,94 @@ public class Metodos {
 
 		switch (vidas) {
 		case 7: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 6: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |      / \\              |");
-			System.out.println(" |     /___\\_______      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║      / \\              ║");
+			System.out.println(" ║     ╱___╲_______      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 5: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |                       |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |               |");
-			System.out.println(" |      /|\\              |");
-			System.out.println(" |     /_|_\\_______      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║                       ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║      /│\\              ║");
+			System.out.println(" ║     ╱_│_╲_______      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 4: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /             |");
-			System.out.println(" |       |/              |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |               |");
-			System.out.println(" |      /|\\              |");
-			System.out.println(" |     /_|_\\_______      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /             ║");
+			System.out.println(" ║       │╱              ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║      /│\\              ║");
+			System.out.println(" ║     ╱_│_╲_______      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 3: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /   :         |");
-			System.out.println(" |       |/              |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |               |");
-			System.out.println(" |      /|\\              |");
-			System.out.println(" |     /_|_\\_______      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /   :         ║");
+			System.out.println(" ║       │╱              ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║      /│\\              ║");
+			System.out.println(" ║     ╱_│_╲_______      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 2: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /   :         |");
-			System.out.println(" |       |/              |");
-			System.out.println(" |       |               |");
-			System.out.println(" |       |   _____       |");
-			System.out.println(" |      /|\\  |   |       |");
-			System.out.println(" |     /_|_\\_|___|_      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /   :         ║");
+			System.out.println(" ║       │╱              ║");
+			System.out.println(" ║       │               ║");
+			System.out.println(" ║       │   _____       ║");
+			System.out.println(" ║      /│\\  │   │       ║");
+			System.out.println(" ║     ╱_│_╲_│___│_      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		case 1: {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /   :         |");
-			System.out.println(" |       |/    O         |");
-			System.out.println(" |       |    /|\\        |");
-			System.out.println(" |       |   _/_\\_       |");
-			System.out.println(" |      /|\\  |   |       |");
-			System.out.println(" |     /_|_\\_|___|_      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /   :         ║");
+			System.out.println(" ║       │╱    O         ║");
+			System.out.println(" ║       │    /|\\        ║");
+			System.out.println(" ║       │   _/_\\_       ║");
+			System.out.println(" ║      /│\\  │   │       ║");
+			System.out.println(" ║     ╱_│_╲_│___│_      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			break;
 		}
 		}
@@ -382,17 +375,16 @@ public class Metodos {
 
 				}
 
-				System.out.println("  _______________________");
-				System.out.println(" |                       |");
-				System.out.println(" |       ________        |");
-				System.out.println(" |       | /             |");
-				System.out.println(" |       |/   \\O/        |");
-				System.out.println(" |       |     |         |");
-				System.out.println(" |       |   _/_\\_       |");
-				System.out.println(" |      /|\\  |   |       |");
-				System.out.println(" |     /_|_\\_|___|_      |");
-				System.out.println(" |                       |");
-				System.out.println(" |_______________________|");
+				System.out.println(" ╔═══════════════════════╗");
+				System.out.println(" ║       ________        ║");
+				System.out.println(" ║       │ /             ║");
+				System.out.println(" ║       │╱   \\O/        ║");
+				System.out.println(" ║       │     |         ║");
+				System.out.println(" ║       │   _/_\\_       ║");
+				System.out.println(" ║      /│\\  │   │       ║");
+				System.out.println(" ║     ╱_│_╲_│___│_      ║");
+				System.out.println(" ║                       ║");
+				System.out.println(" ╚═══════════════════════╝");
 				System.out.println();
 				System.out.println();
 				System.out.println();
@@ -409,17 +401,16 @@ public class Metodos {
 
 				}
 
-				System.out.println("  _______________________");
-				System.out.println(" |                       |");
-				System.out.println(" |       ________        |");
-				System.out.println(" |       | /             |");
-				System.out.println(" |       |/    O         |");
-				System.out.println(" |       |    /|\\        |");
-				System.out.println(" |       |   _/_\\_       |");
-				System.out.println(" |      /|\\  |   |       |");
-				System.out.println(" |     /_|_\\_|___|_      |");
-				System.out.println(" |                       |");
-				System.out.println(" |_______________________|");
+				System.out.println(" ╔═══════════════════════╗");
+				System.out.println(" ║       ________        ║");
+				System.out.println(" ║       │ /             ║");
+				System.out.println(" ║       │╱    O         ║");
+				System.out.println(" ║       │    /|\\        ║");
+				System.out.println(" ║       │   _/_\\_       ║");
+				System.out.println(" ║      /│\\  │   │       ║");
+				System.out.println(" ║     ╱_│_╲_│___│_      ║");
+				System.out.println(" ║                       ║");
+				System.out.println(" ╚═══════════════════════╝");
 				System.out.println();
 				System.out.println();
 				System.out.println();
@@ -438,17 +429,16 @@ public class Metodos {
 
 			victoriasConsecutivas++;
 			
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /             |");
-			System.out.println(" |       |/   \\O/        |");
-			System.out.println(" |       |     |         |");
-			System.out.println(" |       |   _/_\\_       |");
-			System.out.println(" |      /|\\  |   |       |");
-			System.out.println(" |     /_|_\\_|___|_      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /             ║");
+			System.out.println(" ║       │╱   \\O/        ║");
+			System.out.println(" ║       │     |         ║");
+			System.out.println(" ║       │   _/_\\_       ║");
+			System.out.println(" ║      /│\\  │   │       ║");
+			System.out.println(" ║     ╱_│_╲_│___│_      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			System.out.println();
 			System.out.println("       ¡HAS GANADO!");
 			System.out.println("  La palabra era " + palabra.toUpperCase());
@@ -465,17 +455,16 @@ public class Metodos {
 			System.out.println();
 
 		} else {
-			System.out.println("  _______________________");
-			System.out.println(" |                       |");
-			System.out.println(" |       ________        |");
-			System.out.println(" |       | /   :         |");
-			System.out.println(" |       |/    O         |");
-			System.out.println(" |       |    /|\\        |");
-			System.out.println(" |       |    / \\        |");
-			System.out.println(" |      /|\\              |");
-			System.out.println(" |     /_|_\\_______      |");
-			System.out.println(" |                       |");
-			System.out.println(" |_______________________|");
+			System.out.println(" ╔═══════════════════════╗");
+			System.out.println(" ║       ________        ║");
+			System.out.println(" ║       │ /   :         ║");
+			System.out.println(" ║       │╱    O         ║");
+			System.out.println(" ║       │    /|\\        ║");
+			System.out.println(" ║       │    / \\        ║");
+			System.out.println(" ║      /│\\              ║");
+			System.out.println(" ║     ╱_│_╲_______      ║");
+			System.out.println(" ║                       ║");
+			System.out.println(" ╚═══════════════════════╝");
 			System.out.println();
 			System.out.println();
 			System.out.println("        GAME OVER");
@@ -516,18 +505,18 @@ public class Metodos {
 	 */
 	public static void about() {
 
-		System.out.println("\n .---------------------------.");
-		System.out.println(" | ACERCA DE Javangman 2.1.2 |");
-		System.out.println(" |---------------------------|");
-		System.out.println(" |    Programado con Java    |");
-		System.out.println(" |                           |");
-		System.out.println(" |       " + (vDiccionarioProfesiones.length + vDiccionario.length + vDiccionarioPaises.length + vDiccionarioAstro.length + vDiccionarioAnimales.length + vDiccionarioInstrumentos.length + vDiccionarioEstados.length) + " palabras       |");
-		System.out.println(" |                           |");
-		System.out.println(" |      Agradecimientos      |");
-		System.out.println(" |        Paula Béjar        |");
-		System.out.println(" |                           |");
-		System.out.println(" |  (c)Tomás Generelo, 2020  |");
-		System.out.println(" ·---------------------------·\n");
+		System.out.println("\n ╔═══════════════════════════╗");
+		System.out.println(" ║  ACERCA DE Javangman 2.2  ║");
+		System.out.println(" ╠═══════════════════════════╣");
+		System.out.println(" ║    Programado con Java    ║");
+		System.out.println(" ║                           ║");
+		System.out.println(" ║       " + (vDiccionarioProfesiones.length + vDiccionario.length + vDiccionarioPaises.length + vDiccionarioAstro.length + vDiccionarioAnimales.length + vDiccionarioInstrumentos.length + vDiccionarioEstados.length) + " palabras       ║");
+		System.out.println(" ║                           ║");
+		System.out.println(" ║      Agradecimientos      ║");
+		System.out.println(" ║        Paula Béjar        ║");
+		System.out.println(" ║                           ║");
+		System.out.println(" ║  (c)Tomás Generelo, 2020  ║");
+		System.out.println(" ╚═══════════════════════════╝\n");
 	}
 
 }
